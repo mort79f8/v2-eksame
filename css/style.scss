@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+.background-dark {
+  background-color: #eee;
+}
+.wrapper {
+  width: 60%;
+  margin: 0 auto;
+}
+header {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  .logo-text {
+    width: 30%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 0.5rem;
+    font-weight: bold;
+    span {
+      text-transform: uppercase;
+    }
+  }
+  nav {
+    width: 40%;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          color: #222;
+        }
+      }
+    }
+  }
+}
+
+.top-divider {
+  height: 2px;
+  border-bottom: 2px solid black;
+}
+
+.slideshow {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.about-section {
+  h2 {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+main {
+  margin-top: 50px;
+  .instagram-main {
+    h2 {
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+    .instagram-images {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      column-gap: 10px;
+      row-gap: 10px;
+      padding-bottom: 50px;
+      img {
+        object-fit: fit;
+        width: 100%;
+        max-height: 100%;
+      }
+      .instagram-image {
+        position: relative;
+        color: white;
+        text-align: center;
+        .panel {
+          .icons {
+            display: none;
+          }
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          &:hover {
+            background-color: black;
+            opacity: 50%;
+          }
+          &:hover .icons {
+            display: inline;
+          }
+          .eye {
+            z-index: 1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+          .comment {
+            position: absolute;
+            bottom: 8px;
+            left: 16px;
+          }
+          .heart {
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translate(-50%);
+          }
+          .instagram {
+            position: absolute;
+            bottom: 8px;
+            right: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .products-main {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    h2 {
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+    .products-images {
+      padding-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      row-gap: 20px;
+      .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+        &:hover .flip-card-inner {
+          transform: rotateY(180deg);
+        }
+        .flip-card-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.8s;
+          transform-style: preserve-3d;
+
+          .flip-card-front,
+          .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden; /* Safari */
+            backface-visibility: hidden;
+          }
+          .flip-card-front {
+            background-color: #bbb;
+            color: black;
+          }
+          .flip-card-back {
+            background-color: black;
+            color: white;
+            transform: rotateY(180deg);
+          }
+        }
+      }
+    }
+  }
+  .employees {
+    margin-top: 50px;
+    display: flex;
+    padding-bottom: 50px;
+    article {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      width: 48%;
+      img {
+        width: 50%;
+      }
+      p {
+        width: 38%;
+        margin: 10px;
+      }
+    }
+  }
+}
+
+.prices {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  h2 {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  h3 {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    &:last-of-type {
+      margin-top: 20px;
+    }
+  }
+}
+
+footer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h2 {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    &:last-of-type {
+      margin-top: 20px;
+    }
+  }
+  p {
+    &:nth-of-type(1) {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.active-page {
+  font-weight: bolder;
+}
