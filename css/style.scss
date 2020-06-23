@@ -102,8 +102,8 @@ main {
           width: 100%;
           height: 100%;
           &:hover {
-            background-color: black;
-            opacity: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            // opacity: 0.5; /* brug comma tal!! ikke procent! */
           }
           &:hover .icons {
             display: inline;
@@ -178,7 +178,7 @@ main {
             width: 100%;
             height: 100%;
             -webkit-backface-visibility: hidden; /* Safari */
-            backface-visibility: hidden;
+            backface-visibility: hidden; /* elementets bagside er "gemt" */
           }
 
           /* Style the front side (fallback if image is missing) */
@@ -275,6 +275,9 @@ footer {
       display: block;
       margin-left: auto;
       margin-right: auto;
+    }
+    span {
+      font-weight: bold;
     }
   }
 }

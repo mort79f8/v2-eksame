@@ -137,8 +137,7 @@ main .instagram-main .instagram-images .instagram-image .panel .icons {
 }
 
 main .instagram-main .instagram-images .instagram-image .panel:hover {
-  background-color: black;
-  opacity: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 main .instagram-main .instagram-images .instagram-image .panel:hover .icons {
@@ -239,6 +238,7 @@ main .products-main .products-images .flip-card .flip-card-inner .flip-card-back
   -webkit-backface-visibility: hidden;
   /* Safari */
   backface-visibility: hidden;
+  /* elementets bagside er "gemt" */
 }
 
 main .products-main .products-images .flip-card .flip-card-inner .flip-card-front {
@@ -355,6 +355,10 @@ footer p:nth-of-type(1) {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.container article span {
+  font-weight: bold;
 }
 
 @media screen and (max-width: 1400px) {
