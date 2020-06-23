@@ -3,6 +3,7 @@
 
 var i = 0; // Start Point
 var images = []; // Images Array
+var altText = []; // Alt text Array
 var time = 3000; // Time Between Switch
 
 // Image List
@@ -13,9 +14,18 @@ images[3] = "/v2-eksame/img/4.jpg";
 images[4] = "/v2-eksame/img/5.jpg";
 images[5] = "/v2-eksame/img/6.jpg";
 
+// Alt text List
+altText[0] = "Forsiden af forretningen";
+altText[1] = "kop med en slags urte te";
+altText[2] = "klippe redskaber";
+altText[3] = "vente sofa og sofa bord";
+altText[4] = "billed af nogle produkter";
+altText[5] = "billed af klippe stationerne";
+
 // Change Image
 function changeImg() {
   document.slide.src = images[i];
+  document.slide.alt = altText[i];
 
   // Check If Index Is Under Max
   if (i < images.length - 1) {
